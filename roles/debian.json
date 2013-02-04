@@ -1,0 +1,15 @@
+{
+  "name": "debian",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The base role for debian hosts",
+  "default_attributes": {
+    "user": {
+      "name": "www-data"
+    }
+  },
+  "run_list": [
+    "recipe[usual]",
+    "recipe[usual::upgrade_debian]"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "nginx",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The base role for nginx hosts",
+  "default_attributes": {
+    "app": {
+      "name": "test",
+      "web_dir": "/var/www/test/"
+    },
+    "user": {
+      "name": "www-data"
+    }
+  },
+  "run_list": [
+    "recipe[usual::nginx]"
+  ]
+}

@@ -1,5 +1,13 @@
 {
+  "app": {
+    "name": "new.zagirov.name",
+    "web_dir": "/var/www/new.zagirov.name/"
+  },
+  "user": {
+    "name": "www-data"
+  },
   "run_list": [
-    "recipe[nginx]"
+    "role[debian]"
+//    "role[nginx]"
   ]
 }
