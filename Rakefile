@@ -5,6 +5,6 @@ end
 
 namespace :vagrant do
   task :prepare do
-    puts `knife prepare vagrant@localhost -i ~/.vagrant.d/insecure_private_key -p 2222`
+    puts `knife solo prepare vagrant@localhost -i ~/.vagrant.d/insecure_private_key -p 2222`
   end
 end
