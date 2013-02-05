@@ -1,0 +1,19 @@
+{
+  "name": "usual",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The base role for usual server",
+  "default_attributes": {
+    "user": {
+      "name": "www-data"
+    },
+    "login_user": {
+        "name": "stamm",
+        "password": "$1$ihlrowCw$E2XkR5.FkOcccyKowf7lE."
+    }
+  },
+  "run_list": [
+    "recipe[usual]",
+    "recipe[usual::create_user]"
+  ]
+}
