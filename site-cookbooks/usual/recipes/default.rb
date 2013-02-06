@@ -1,6 +1,6 @@
-execute 'apt-get update' do
-  command "apt-get update"
-end
+#execute 'apt-get update' do
+#  command "apt-get update"
+#end
 
 package "git-core"
 package "mc"

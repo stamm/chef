@@ -1,13 +1,17 @@
 desc "Run librarian-chef install to generate library of chefs"
 task :lib_chef do
-  puts `librarian-chef install`
+  exec "librarian-chef install"
 end
 
-namespace :vagrant do
+namespace :vg do
+
+  desc "Prepare vagrant host"
   task :prepare do
-    puts `knife solo prepare vagrant@localhost -i ~/.vagrant.d/insecure_private_key -p 2222`
+    exec "knife solo prepare vagrant@localhost -i ~/.vagrant.d/insecure_private_key -p 2222"
   end
-  task :up do
-    puts `vagrant provision`
+
+  desc "Do vagrant provision"
+  task :do do
+    exec "vagrant provision"
   end
 end

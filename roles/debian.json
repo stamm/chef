@@ -6,10 +6,6 @@
   "default_attributes": {
     "user": {
       "name": "www-data"
-    },
-    "login-user": {
-        "name": "stamm",
-        "password": "$1$ihlrowCw$E2XkR5.FkOcccyKowf7lE.",
     }
   },
   "run_list": [

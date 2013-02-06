@@ -14,7 +14,15 @@ GIT
       build-essential (>= 0.0.0)
       ohai (>= 1.1.4)
 
+GIT
+  remote: https://github.com/fnichol/chef-user
+  ref: master
+  sha: 1b52f8d41c0a320d29fa5e695393bef583e87ca8
+  specs:
+    user (0.3.1)
+
 DEPENDENCIES
   nginx (>= 0)
   runit (>= 0)
+  user (>= 0)
 
