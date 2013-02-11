@@ -1,0 +1,10 @@
+{
+    "id": "stamm",
+    "username": "stamm",
+    "comment": "Rustam Zagirov",
+    "password": "$1$ihlrowCw$E2XkR5.FkOcccyKowf7lE.",
+    "admin" : true,
+    "ssh_keys": [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1E2GylJ3Rl3kDFC0oU44oWoGOWD692+1E83z8D5smFkpYQjCDSIARial0Gc3iPBFe5s0gV23z6yY6CYF0RBpN/gOK8uHSHDpqffvRBjyz53urd8KQXdhMF2PdgWj3er/OY3MoFmyaR06jUfWcaB/ZXhqqOtfjpKpZJ3VNgwfIZ1ow9+nIGnkiFkG3VgW0fbMCWu7hNy0X8lB9h0Pl5Xp9W9RxzSG1BXfJ8TSiJkj+Ol3RmaTVoGAkoAv8rEGwj9c2bW+O40l9EctSSw+EIWhvbFkpFNpBHLHb9/7ORX1WqIHOT2GHGjNkhxtAjrv9AzEQe/CDh4WVLCvMmKN0hLdF stamm@stamm"
+    ]
+}
