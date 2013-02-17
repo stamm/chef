@@ -42,7 +42,7 @@ users.each do |user_name|
 
   cookbook_file "#{home}/.config/mc/ini" do
     source "home/.config/mc/ini"
-    mode 0644
+    mode 0600
     owner user['username']
   end
 

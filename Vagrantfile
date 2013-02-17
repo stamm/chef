@@ -14,6 +14,7 @@ Vagrant::Config.run do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "lucid32"
+  config.vm.forward_port 80, 8085
 
   VAGRANT_JSON = MultiJson.load(Pathname(__FILE__).dirname.join('nodes', 'vagrant.json').read)
 
@@ -28,6 +29,10 @@ Vagrant::Config.run do |config|
     VAGRANT_JSON['run_list'].each do |recipe|
       chef.add_recipe(recipe)
     end if VAGRANT_JSON['run_list']
+
+    Dir["#{Pathname(__FILE__).dirname.join('roles')}/*.json"].each do |role|
+      chef.add_role(role)
+    end
   end
 
   # The url from where the 'config.vm.box' box will be fetched if it

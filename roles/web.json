@@ -1,0 +1,10 @@
+{
+  "name": "web",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The role for application server",
+  "run_list": [
+    "role[usual]",
+    "role[nginx]"
+  ]
+}
