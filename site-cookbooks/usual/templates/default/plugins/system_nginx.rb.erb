@@ -1,0 +1,11 @@
+provides "system_nginx"
+provides "system_nginx/version"
+
+system_nginx Mash.new unless system_nginx
+system_nginx[:version] = nil unless system_nginx[:version]
+
+status, stdout, stderr = run_command(:no_status_check => true, :command => "<%= @nginx_bin %> -v")
+
+if 0 == status
+    system_nginx[:version] = stderr.match(/nginx\/([0-9.]+)/)[1]
+end

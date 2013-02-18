@@ -2,6 +2,11 @@
 #  command "apt-get update"
 #end
 
+include_recipe "usual::ohai_plugin"
+# remove this in your prod recipe
+
+puts "Nginx version: #{node.system_nginx.version}" if node['system_nginx']
+
 package "git-core"
 package "mc"
 package "htop"
