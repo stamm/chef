@@ -10,14 +10,14 @@
     },
     "user": {
       "name": "www-data"
-    },
-    "nginx": {
-      "version": "1.3.11",
-      "default_site_enabled": true,
-      "source": {
-          "modules": ["http_gzip_static_module", "http_ssl_module"]
-      }
     }
+//    "nginx": {
+//      "version": "1.3.14",
+//      "default_site_enabled": true,
+//      "source": {
+//          "modules": ["http_gzip_static_module", "http_ssl_module"]
+//      }
+//    }
   },
   "run_list": [
     "recipe[nginx]",

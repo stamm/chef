@@ -6,6 +6,13 @@ SITE
     runit (0.16.2)
 
 GIT
+  remote: git://github.com/fnichol/chef-rbenv.git
+  ref: v0.7.2
+  sha: f2b53292e810dd2b43f6121f9958f5f29979dcb1
+  specs:
+    rbenv (0.7.2)
+
+GIT
   remote: git://github.com/opscode-cookbooks/nginx.git
   ref: master
   sha: be3346362a2098153fa9ebe0ab2ca26529d01633
@@ -23,6 +30,7 @@ GIT
 
 DEPENDENCIES
   nginx (>= 0)
+  rbenv (>= 0)
   runit (>= 0)
   user (>= 0)
 

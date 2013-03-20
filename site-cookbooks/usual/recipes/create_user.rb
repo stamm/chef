@@ -5,10 +5,11 @@ chef_gem "ruby-shadow"
 
 
 users = data_bag("users")
-puts users.inspect
+
 group "admins" do
   gid 2300
 end
+
 admins = []
 users.each do |user_name|
   user = data_bag_item("users", user_name)
@@ -38,6 +39,16 @@ users.each do |user_name|
     owner user['username']
     mode 00700
     recursive true
+  end
+
+  directory "#{home}/.ssh" do
+    owner user['username']
+    mode 0770
+  end
+
+  template "#{home}/.ssh/authorized_keys" do
+    owner user['username']
+    variables keys: user['ssh_keys']
   end
 
   cookbook_file "#{home}/.config/mc/ini" do

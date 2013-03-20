@@ -4,7 +4,6 @@
   "json_class": "Chef::Role",
   "description": "The base role for debian hosts",
   "run_list": [
-    "role[usual]",
     "recipe[usual::upgrade_debian]"
   ]
 }

@@ -5,6 +5,7 @@
   "description": "The role for application server",
   "run_list": [
     "role[usual]",
-    "role[nginx]"
+    "role[nginx]",
+    "role[ruby]"
   ]
 }

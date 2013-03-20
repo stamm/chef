@@ -1,0 +1,22 @@
+Set hostname:
+  hostname precipuus.net
+  echo "precipuus.net" > /etc/hostname
+  echo "precipuus.net" > /etc/mailname
+
+
+Set timezone
+  echo "tzdata tzdata/Areas select Europe" | debconf-set-selections
+  echo "tzdata tzdata/Zones/Europe select Moscow" | debconf-set-selections
+  TIMEZONE="Europe/Moscow"
+  echo $TIMEZONE > /etc/timezone
+  cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime
+
+Install ntp
+  apt-get install ntp
+
+/etc/apt/apt.conf
+  APT::Default-Release "stable";
+  APT::Cache-Limit 125829120;
+
+
+http://davejamesmiller.com/blog/how-i-set-up-my-debian-server

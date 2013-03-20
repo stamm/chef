@@ -1,6 +1,6 @@
 desc "Run librarian-chef install to generate library of chefs"
 task :lib_chef do
-  exec "librarian-chef install"
+  exec "bundle exec librarian-chef install"
 end
 
 namespace :vg do
@@ -12,6 +12,6 @@ namespace :vg do
 
   desc "Do vagrant provision"
   task :do do
-    exec "vagrant provision"
+    exec "bundle exec vagrant provision"
   end
 end

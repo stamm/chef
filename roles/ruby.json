@@ -1,0 +1,9 @@
+{
+  "name": "ruby",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "The base role for ruby",
+  "run_list": [
+    "recipe[rbenv::system]"
+  ]
+}
